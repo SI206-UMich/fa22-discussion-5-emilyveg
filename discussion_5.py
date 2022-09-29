@@ -120,6 +120,20 @@ class TestAllMethods(unittest.TestCase):
 
 	# Check to see whether the warehouse correctly return the item with the highest price
 	def test_warehouse_max_price(self):
+		def test_warehouse_max_stocks(self):
+		# self.item1 = Item("Beer", 6, 20)
+		# self.item2 = Item("Cider", 5, 25)
+		# self.item3 = Item("Water", 1, 100)
+		# self.item4 = Item("Fanta", 2, 60)
+			Costco = Warehouse([self.item2, self.item2, self.item4])
+			max_price = Costco.get_max_price()
+			self.assertEqual(max_price, self.item4)
+
+			Costco.add_item(self.item3)
+			max_price_new = Costco.get_max_price()
+			self.assertEqual(max_price_new, self.item3)
+
+		pass
 		pass
 		
 
